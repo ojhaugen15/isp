@@ -1,0 +1,72 @@
+` Reverse A Singly-Linked List 
+
+... requires that atomic 'o' creates "list" when only one argument `
+
+:reverseString inputString
+:a previousNode :u inputString;
+:a currentNode :y :u inputString;;
+:a outputString :o :u previousNode;;
+:i :areSame currentNode null;
+::a nextNode :y currentNode;
+::y :u currentNode; previousNode outputString
+::a previousNode currentNode
+::a currentNode nextNode
+:e outputString
+
+
+` Flatten An Array
+
+ ... no solution, as 'isp' does not include 'lists of lists' but here is what I would do with "bracket-script" (my subset of 'JavaScript')... ` 
+
+function flattenArray (inputArray, currentIndex, currentOutput) {
+ outputArray = []
+ searchIndex = 0
+ if (arentSame(currentIndex, undefined)) {
+  searchIndex = currentIndex
+  outputArray = currentOutput
+ }
+ arraySize = getValue(inputArray, 'length')
+ while (firstGreater(arraySize, searchIndex)) {
+  currentItem = getValue(inputArray, searchIndex)
+  if (isArray(currentItem)) {
+   index2 = 0
+   size2 = getValue(currentItem, 'length')
+   while (firstGreater(size2, index2)) {
+    item2 = getValue(currentItem, index2)
+    outputArray.push(item2)
+    index2 = addNumbers(index2, 1)
+   }
+   currentIndex = addNumbers(searchIndex, 1)
+   outputArray = flattenArray(inputArray, currentIndex, currentOutput)
+   return outputArray
+  }
+  outputArray.push(currentItem)
+  searchIndex = addNumbers(searchIndex, 1)
+ }
+ return outputArray
+}
+
+
+` Max Product Finder
+
+...... requires that atomic 'o' does nothing when second argument "null" `
+
+:orderNumbers numberList
+:a currentNode :u numberList;
+:a greatestNumber :u :u numberList;;
+:a greaterFound false
+:a cloneList :o :u numberList;;
+:i :arentSame currentNode null;
+::a currentNumber :u currentNode;
+::i :firstGreater currentNumber greatestNumber;
+:::a greaterFound true
+:::o cloneList greatestNumber
+:::a greatestNumber currentNumber
+:::a currentNumber null
+::o cloneList currentNumber
+::a currentNode :y currentNode;
+:i :areSame greaterFound false;
+::y cloneList :y :u cloneList;;
+::a greaterFound true
+:a lesserOrdered :orderNumbers cloneList;
+:e :o greatestNumber lesserOrdered;
