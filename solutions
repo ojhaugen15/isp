@@ -1,6 +1,5 @@
 ` Reverse A Singly-Linked List 
-
-... requires that atomic 'o' creates "list" when only one argument `
+`... requires that atomic 'o' creates "list" when only one argument
 
 :reverseString inputString
 :a previousNode :u inputString;
@@ -15,8 +14,7 @@
 
 
 ` Flatten An Array
-
- ... no solution, as 'isp' does not include 'lists of lists' but here is what I would do with "bracket-script" (my subset of 'JavaScript')... ` 
+`... no solution, as 'isp' does not include 'lists of lists' but here is what I would do with "bracket-script" (my subset of 'JavaScript')... 
 
 function flattenArray (inputArray, currentIndex, currentOutput) {
  outputArray = []
@@ -48,8 +46,7 @@ function flattenArray (inputArray, currentIndex, currentOutput) {
 
 
 ` Max Product Finder
-
-...... requires that atomic 'o' does nothing when second argument "null" `
+`...... requires that atomic 'o' does nothing when second argument "null" 
 
 :orderNumbers numberList
 :a currentNode :u numberList;
