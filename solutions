@@ -67,3 +67,41 @@ function flattenArray (inputArray, currentIndex, currentOutput) {
 ::a greaterFound true
 :a lesserOrdered :orderNumbers cloneList;
 :e :o greatestNumber lesserOrdered;
+
+
+` Semi-Prime Numbers
+` ... if I am not mistaken, my algorithm employs the Sieve of Eratosthenes
+
+a prime_list :o 2 3;
+
+:countSemiprime inputNumber currentIndex currentCount
+:a searchIndex 5
+:a countOutput 3
+:a searchEnd :roundDown :quotientNumbers inputNumber 2;;
+:i :arentSame currentIndex undefined;
+::a searchIndex currentIndex
+::a countOutput currentCount
+::a currentIndex undefined
+:i :firstGreater searchEnd searchIndex;
+::i :isPrime searchIndex;
+:::a currentNode :u prime_list;
+:::i :andValues :arentSame currentNode null; :firstGreater inputNumber :multiplyNumbers :u currentNode; searchIndex;;;
+::::a countOutput :addNumbers countOutput 1;
+::::a currentNode :y currentNode;
+:::e :countSemiprime inputNumber :addNumbers searchIndex 2; countOutput;
+::a searchIndex :addNumbers searchIndex 2; 
+:e countOutput
+
+:isPrime inputNumber
+:a currentNode :u prime_list;
+:i :arentSame currentNode null;
+::i :areSame false :noRemainder inputNumber :u currentNode;;;
+:::e false
+::a currentNode :y currentNode;
+:o prime_list inputNumber
+:e true
+
+:noRemainder number1 number2
+:i :areSame 0 :getRemainder number1 number2;;
+::e true
+:e false
