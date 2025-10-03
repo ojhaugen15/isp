@@ -104,3 +104,30 @@ a prime_list :o 2 3;
 :i :areSame 0 :getRemainder number1 number2;;
 ::e true
 :e false
+
+
+` Reverse Words
+
+:reverseWords inputString
+:a currentNode :u inputString;
+:a outputString ''
+:i :arentSame currentNode null;
+::a currentCharacter :u currentNode;
+::i :areSame currentCharacter ' ';
+:::a outputString :o ' ' outputString;
+:::e :reversalEngine outputString :y currentNode;;
+::a outputString :o outputString currentCharacter;
+::a currentNode :y currentNode;
+:e outputString
+
+:reversalEngine outputString currentNode
+:a currentWord :u currentNode;
+:i :arentSame currentNode null;
+::a currentCharacter :u currentNode;
+::i :areSame currentCharacter ' ';
+:::a outputString :o ' ' outputString;
+:::a outputString :o currentWord outputString;
+:::e :reversalEngine outputString :y currentNode;;
+::a currentWord :o currentWord currentCharacter;
+::a currentNode :y currentNode;
+:e outputString
