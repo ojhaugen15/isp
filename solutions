@@ -131,3 +131,28 @@ a prime_list :o 2 3;
 ::a currentWord :o currentWord currentCharacter;
 ::a currentNode :y currentNode;
 :e outputString
+
+
+` Product of Everything Else
+
+:elseProduct numberString
+:a stringSize :getSize numberString;
+:a searchIndex 0
+:i :firstGreater stringSize searchIndex;
+::a outputString :o outputString 1;
+::a searchIndex :addNumbers searchIndex 1;
+:i :firstGreater stringSize searchIndex;
+::a index2 0
+::a currentNode :u numberString;
+::a outputCurrent :u outputString;
+::a saveIndex searchIndex
+::i :firstGreater stringSize index2;
+:::i :arentSame searchIndex index2;
+::::u outputCurrent :multiplyNumbers :u outputCurrent; :u currentNode;;
+::::a searchIndex null
+:::a searchIndex saveIndex
+:::a currentNode :y currentNode;
+:::a outputCurrent :y outputCurrent;
+:::a index2 :addNumbers index2 1;
+::a searchIndex :addNumbers searchIndex 1;
+:e outputCurrent
