@@ -1,0 +1,35 @@
+` This is actually a solution - my original (but quickly-made/unrefined/untested) solution - to a "hard" LeetCode programming challenge - in my 
+` original PL 'Isp' - and it was so much fun that I recommend anyone reading this to try to solve it themselves before looking at my solution . . . 
+
+
+:medianTwo array1 array2
+:i :firstGreater :u :u array1;; :u :u array2;;;
+::a saveArray array2
+::a array2 array1
+::a array1 saveArray
+:a lengthConcatenated :concatenateSorted :u array1; :u array2; 0;
+:a searchIndex 1
+:a currentNode :u array1;
+:a isEven :areSame :remainderNumbers lengthConcatenated 2; 0;
+:a searchEnd :roundUp :quotientNumbers lengthConcatenated 2;;
+:i :arentSame searchIndex searchEnd;
+::a currentNode :y currentNode;
+::a searchIndex :addNumbers searchIndex 1;
+:i :areSame isEven true;
+::e :quotientNumbers :addNumbers :u currentNode; :u :y currentNode;;; 2;
+:e :u currentNode;
+
+:concatenateSorted node1 node2 lengthCount previous1
+:i :firstGreater :u node1; :u node2;;
+::y node2 node1
+::y previous1 node2
+::e :concatenateSorted :u node2; node1 :addNumbers lengthCount 1;;
+:a next1 :y node1;
+:i :areSame next1 null;
+::a lengthCount :addNumbers lengthCount 1;
+::y node1 node2
+::i :arentSame node2 null;
+:::a lengthCount :addNumbers lengthCount 1;
+:::a node2 :y node2;
+::e lengthCount 
+:e :concatenateSorted next1 node2 :addNumbers lengthCount 1; node1;
