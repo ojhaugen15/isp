@@ -1,0 +1,25 @@
+% ProjectEuler.net problem twelve solution (a two-in-one problem), see:
+% https://projecteuler.net/problem=12
+
+:firstTriangular numberDivisors
+:a currentTriangular 1
+:a nextFactor 2
+:i :areSame :firstGreater :countDivisors currentTriangular; numberDivisors; false;
+::a currentTriangular :addNumbers currentTriangular nextFactor;
+::a nextFactor :addNumbers nextFactor 1;
+:e currentTriangular
+
+:countDivisors inputNumber
+:a squareRooted :squareRoot inputNumber;
+:a currentNumber :roundDown squareRooted;
+:a outputCount 2
+:i :areSame squareRooted currentNumber
+::a outputCount :addNumbers outputCount 1;
+::a currentNumber :differenceNumbers currentNumber 1;
+:i :arentSame currentNumber 1;
+::a remainderResult :remainderNumbers inputNumber currentNumber;
+::i :areSame remainderResult 0;
+:::a outputCount :addNumbers outputCount 2;
+:::a remainderResult undefined
+::a currentNumber :differenceNumbers currentNumber 1;
+:e outputCount
