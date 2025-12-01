@@ -1,5 +1,5 @@
-` Reverse A Singly-Linked List 
-`... requires that atomic 'o' creates "list" when only one argument
+% Reverse A Singly-Linked List 
+% ... requires that atomic 'o' creates "list" when only one argument
 
 :reverseString inputString
 :a previousNode :u inputString;
@@ -13,8 +13,8 @@
 :e outputString
 
 
-` Flatten An Array
-`... no solution, as 'isp' does not include 'lists of lists' but here is what I would do with "bracket-script" (my subset of 'JavaScript')... 
+% Flatten An Array
+%... no solution, as 'isp' does not include 'lists of lists' but here is what I would do with "bracket-script" (my subset of 'JavaScript')... 
 
 function flattenArray (inputArray, currentIndex, currentOutput) {
  outputArray = []
@@ -45,8 +45,8 @@ function flattenArray (inputArray, currentIndex, currentOutput) {
 }
 
 
-` Max Product Finder
-`...... requires that atomic 'o' does nothing when second argument "null" 
+% Max Product Finder
+%...... requires that atomic 'o' does nothing when second argument "null" 
 
 :orderNumbers numberList
 :a currentNode :u numberList;
@@ -69,7 +69,7 @@ function flattenArray (inputArray, currentIndex, currentOutput) {
 :e :o greatestNumber lesserOrdered;
 
 
-` Semi-Prime Numbers
+% Semi-Prime Numbers
 
 a prime_list :o 2 3;
 
@@ -105,8 +105,7 @@ a prime_list :o 2 3;
 ::e true
 :e false
 
-
-` Reverse Words
+% Reverse Words
 
 :reverseWords inputString
 :a currentNode :u inputString;
@@ -133,7 +132,7 @@ a prime_list :o 2 3;
 :e outputString
 
 
-` Product of Everything Else
+% Product of Everything Else
 
 :elseProduct numberString
 :a stringSize :getSize numberString;
@@ -158,7 +157,7 @@ a prime_list :o 2 3;
 :e outputCurrent
 
 
-`Egg dropper
+% Egg dropper
 
 :eggDrop numberFloors
 :i :areSame numberFloors 2;
