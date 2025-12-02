@@ -1,5 +1,7 @@
-% ProjectEuler.net problem twelve solution (a two-in-one problem), see:
-% https://projecteuler.net/problem=12
+% ProjectEuler.net problems are really more math problems (but,
+% thereby, can all be finessed into computer-programming problems)
+
+% Problem 12: https://projecteuler.net/problem=12
 
 :firstTriangular numberDivisors
 :a currentTriangular 1
@@ -23,3 +25,25 @@
 :::a remainderResult undefined
 ::a currentNumber :differenceNumbers currentNumber 1;
 :e outputCount
+
+% Problem 5: https://projecteuler.net/problem=5
+
+:smallestMultiple topNumber
+:a outputNumber 1
+:a currentNumber 2
+:i :arentSame :firstGreater currentNumber topNumber; true;
+::a foundPrime :isPrime currentNumber;
+::i :areSame foundPrime true;
+:::a outputNumber :productNumbers outputNumber :largestPower topNumber currentNumber;;
+:::a foundPrime false
+::a currentNumber :addNumbers currentNumber 1;
+:e outputNumber
+
+:largestPower limitNumber mainNumber
+:a outputNumber mainNumber
+:a nextPower :productNumbers mainNumber mainNumber;
+:i :firstGreater limitNumber nextPower;
+::a outputNumber nextPower
+::a nextPower :productNumbers outputNumber mainNumber;
+:e outputNumber
+
