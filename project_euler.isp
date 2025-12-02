@@ -1,6 +1,7 @@
 % ProjectEuler.net problems are really more math problems (but,
 % thereby, can all be finessed into computer-programming problems)
 
+
 % Problem 12: https://projecteuler.net/problem=12
 
 :firstTriangular numberDivisors
@@ -25,6 +26,7 @@
 :::a remainderResult undefined
 ::a currentNumber :differenceNumbers currentNumber 1;
 :e outputCount
+
 
 % Problem 5: https://projecteuler.net/problem=5
 
