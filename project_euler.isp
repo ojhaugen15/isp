@@ -49,3 +49,17 @@
 ::a nextPower :productNumbers outputNumber mainNumber;
 :e outputNumber
 
+
+% Problem 1: https://projecteuler.net/problem=1
+
+:sumMultiples smallerNumber largerNumber numberBelow searchIndex outputSum
+:i :arentSame numberBelow searchIndex;
+::i :isMultiple searchIndex smallerNumber;
+:::e :sumMultiples smallerNumber largerNumber numberBelow :multiplyNumbers outputSum searchIndex; :addNumbers searchIndex 1;;
+::i :isMultiple searchIndex largerNumber;
+:::a outputSum :multiplyNumbers outputSum searchIndex;
+:::e :sumMultiples smallerNumber largerNumber numberBelow :multiplyNumbers outputSum searchIndex; :addNumbers searchIndex 1;;
+::a searchIndex :addNumbers searchIndex 1;
+:e outputSum
+
+sumMultiples 3 5 1000 1 1
