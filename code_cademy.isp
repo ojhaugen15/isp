@@ -16,13 +16,9 @@
 % Flatten An Array
 %... no solution, as 'isp' does not include 'lists of lists' but here is what I would do with "bracket-script" (my subset of 'JavaScript')... 
 
-function flattenArray (inputArray, currentIndex, currentOutput) {
- outputArray = []
- searchIndex = 0
- if (arentSame(currentIndex, undefined)) {
-  searchIndex = currentIndex
-  outputArray = currentOutput
- }
+% on must start with 0 and [] respectively for the second and third arguments 
+
+function flattenArray (inputArray, searchIndex, outputArray) {
  arraySize = getValue(inputArray, 'length')
  while (firstGreater(arraySize, searchIndex)) {
   currentItem = getValue(inputArray, searchIndex)
@@ -71,16 +67,12 @@ function flattenArray (inputArray, currentIndex, currentOutput) {
 
 % Semi-Prime Numbers
 
+% the second and third arguments when first run must be respectively 5 and 3
+
 a prime_list :o 2 3;
 
-:countSemiprime inputNumber currentIndex currentCount
-:a searchIndex 5
-:a countOutput 3
+:countSemiprime inputNumber searchIndex countOutput
 :a searchEnd :roundDown :quotientNumbers inputNumber 2;;
-:i :arentSame currentIndex undefined;
-::a searchIndex currentIndex
-::a countOutput currentCount
-::a currentIndex undefined
 :i :firstGreater searchEnd searchIndex;
 ::i :isPrime searchIndex;
 :::a currentNode :u prime_list;
