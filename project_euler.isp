@@ -1,5 +1,4 @@
-% ProjectEuler.net problems are really more math problems (but,
-% thereby, can all be finessed into computer-programming problems)
+% ProjectEuler.net problems
 
 
 % Problem 12: https://projecteuler.net/problem=12
@@ -63,3 +62,22 @@
 :e outputSum
 
 sumMultiples 3 5 1000 1 1
+
+
+% Problem 34: https://projecteuler.net/problem=34
+
+:digitFactorial inputNumber
+:a quotient1000 :realQuotient inputNumber 1000;
+:a testNumber :getFactorial quotient1000;
+:a inputDiminished :differenceNumbers inputNumber :multiplyNumbers quotient1000 1000;;
+:a quotient100 :realQuotient inputNumber 100;
+:a testNumber :addNumbers :getFactorial quotient100; testNumber;
+:a inputDiminished :differenceNumbers inputNumber :multiplyNumbers quotient100 100;;
+:a quotient10 :realQuotient inputNumber 10;
+:a testNumber :addNumbers :getFactorial quotient10; testNumber;
+:a quotient1 :differenceNumbers inputNumber :multiplyNumbers quotient10 10;;
+:a testNumber :addNumbers :getFactorial quotient1; testNumber;
+:i :areSame testNumber inputNumber;
+::e true
+:e false
+
